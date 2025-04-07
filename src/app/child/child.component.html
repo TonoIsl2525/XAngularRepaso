@@ -1,0 +1,44 @@
+
+<div class="main-area">
+    <div class="content-area">
+        <div class="header">
+            <h2>Manage Products</h2>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="form-area">
+                <h3>Create Product</h3>
+                <form #productsForm="ngForm" (ngSubmit)="onProductCreate(productsForm.value)">
+                    <label>Product Name</label>
+                    <input type="text" name="name" ngModel>
+                    <label>Product Description</label>
+                    <input type="text" name="description" ngModel>
+                    <label>Product Price</label>
+                    <input type="text"  name="price" ngModel>
+                    <input type="submit" value="Add Product">
+                </form>
+            </div>
+
+            <div class="product-display-area">
+                <h3>All Products</h3>
+                <table id="products" class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Laptop</td>
+                        <td>Hp laptop 123</td>
+                        <td>$123</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
